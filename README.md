@@ -1,2 +1,4 @@
 # learn-webpack
-demo for learn webpack
+最近公司的项目开发阶段快结束了,但是性能方面还需要优化。
+我们的项目是基于Vue框架使用Vue-cli创建的,之前了解过webpack但是不是很深入。
+为了深入学习webpack,创建了这个repository。我会按照官网的教程从0到1系统的学习一下webpack，并完成一些demo！
