@@ -49,3 +49,6 @@ I strongly recommend against using any
 </table>
 
 &nbsp;&nbsp; haha
+```
+console.log(123)
+```
