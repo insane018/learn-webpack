@@ -48,4 +48,4 @@ I strongly recommend against using any
   </tr>
 </table>
 
-$nbsp;$nbsp; haha
+&nbsp;&nbsp; haha
