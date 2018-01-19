@@ -36,3 +36,7 @@ I strongly recommend against using any `<blink>` tags.
 
 I wish SmartyPants used named entities like `&mdash;`
 instead of decimal-encoded entites like `&#8212;`.
+I strongly recommend against using any `<table>
+  <tr>23</tr>
+  <td>45</td>
+</table>` tags.
