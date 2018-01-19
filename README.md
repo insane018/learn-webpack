@@ -36,7 +36,8 @@ I strongly recommend against using any `<blink>` tags.
 
 I wish SmartyPants used named entities like `&mdash;`
 instead of decimal-encoded entites like `&#8212;`.
-I strongly recommend against using any `<table border="1">
+I strongly recommend against using any 
+<table border="1">
   <tr>
     <th>Month</th>
     <th>Savings</th>
@@ -45,4 +46,4 @@ I strongly recommend against using any `<table border="1">
     <td>January</td>
     <td>$100</td>
   </tr>
-</table>` tags.
+</table>
