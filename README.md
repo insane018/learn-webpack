@@ -29,7 +29,7 @@ dsfsd
 3. 有序列表3
 4. 有序列表4
 > 
-[这是对链接的测试](www.baidu.com)
+[这是对链接的测试](https://www.baidu.com)
 If you want your page to validate under XHTML 1.0 Strict,
 you've got to put paragraph tags in your blockquotes:
 I strongly recommend against using any `<blink>` tags.
