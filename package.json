@@ -1,7 +1,7 @@
 {
   "name": "webpack-demo",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "webpack"
   },
@@ -10,12 +10,14 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "lodash": "^4.17.4",
-    "webpack": "^3.5.5"
+    "lodash": "^4.17.10",
+    "webpack": "^4.15.1"
   },
   "devDependencies": {
     "css-loader": "^0.28.5",
-    "file-loader": "^0.11.2",
-    "style-loader": "^0.18.2"
+    "file-loader": "^1.1.11",
+    "style-loader": "^0.18.2",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
   }
 }
