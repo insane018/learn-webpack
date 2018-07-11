@@ -1,25 +1,35 @@
 const path = require('path');
+const HmtlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js'
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  //devtool: 'inline-source-map',
+  // devServer: {
+  //   contentBase: './dist',
+  //   hot: true
+  // },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ['url-loader']
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader']
+        use:['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HmtlWebpackPlugin({
+      title: 'Output Management'
+    }),
+    // new webpack.NamedModulesPlugin(),
+    // new webpack.HotModuleReplacementPlugin()
+  ]
 }

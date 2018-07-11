@@ -2,19 +2,14 @@
  * Created by 22 on 2017/8/29.
  */
 import _ from 'lodash';
-import './style.css';
-import Icon from './icon.png';
+import printMe from './print.js';
+import { cube } from './math.js'; 
 
 function component() {
-    var element = document.createElement('div');
+    var element = document.createElement('pre');
 
-    element.innerHTML = _.join(['Hello', 'webpack','飒飒'], ' ');
-    element.classList.add('hello');
+    element.innerHTML = ['Hello wepack!', '5 cubed is equal to' + cube(5)].join('\n\n');
 
-    var myIcon = new Image();
-    myIcon.src = Icon;
-    
-    element.appendChild(myIcon);
     return element;
 }
 

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +16,14 @@
     "webpack": "^4.15.1"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.5",
     "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.18.2",
     "url-loader": "^1.0.1",
     "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   }
 }
