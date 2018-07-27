@@ -1,6 +1,7 @@
 const path = require('path');
 const HmtlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -8,28 +9,31 @@ module.exports = {
     app: './src/index.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  //devtool: 'inline-source-map',
-  // devServer: {
-  //   contentBase: './dist',
-  //   hot: true
-  // },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use:['style-loader', 'css-loader']
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader'
       }
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HmtlWebpackPlugin({
-      title: 'Output Management'
-    }),
-    // new webpack.NamedModulesPlugin(),
-    // new webpack.HotModuleReplacementPlugin()
+    new ExtractTextPlugin('style.css'),
+    new OptimizeCssAssetsPlugin({
+      //assetNameRegExp: /\.optimize\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { safe: true, discardComments: { removeAll: true } },
+      canPrint: true
+    })
   ]
 }

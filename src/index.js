@@ -1,16 +1,3 @@
-/**
- * Created by 22 on 2017/8/29.
- */
-import _ from 'lodash';
-import printMe from './print.js';
-import { cube } from './math.js'; 
+import './styles.css';
+console.log(123);
 
-function component() {
-    var element = document.createElement('pre');
-
-    element.innerHTML = ['Hello wepack!', '5 cubed is equal to' + cube(5)].join('\n\n');
-
-    return element;
-}
-
-document.body.appendChild(component());
